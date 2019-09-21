@@ -1,5 +1,6 @@
 package com.example.springhomeworktasks;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Profile;
@@ -14,6 +15,7 @@ import java.math.BigDecimal;
 public class ShopPackagePlus implements ShowProducts{
     private ShopCartService shopCartService;
 
+    @Autowired
     public ShopPackagePlus(ShopCartService shopCartService) {
         this.shopCartService = shopCartService;
     }
